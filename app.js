@@ -1,16 +1,22 @@
+const major = [1, 5, 8];
+const minor = [1, 4, 8];
+
+function highlightNotes(key) {
+  const notes = document.querySelectorAll(".note");
+  notes.forEach((note) => {
+    if (note.textContent === key.toUpperCase()) {
+      note.style.backgroundColor = "red";
+    }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   // capture sumbit button in a variable
   const submit = document.querySelector('input[type="submit"]');
 
-  const notes = document.querySelectorAll(".note");
-  notes.forEach((note, index) => {
-    if (index === 0 || index === 4 || index === 7) {
-      note.style.backgroundColor = "red";
-    }
-  });
-
+  // Handle submit
   submit.addEventListener("click", (event) => {
-    const key = document.querySelector("#enterKey");
-    console.log(key.value);
+    const key = document.querySelector("#enterKey").value;
+    highlightNotes(key);
   });
 });
