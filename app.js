@@ -20,7 +20,17 @@ function getIndexes(key, scale, notes) {
   // Takes the numbers inside the scale, then reduce that number by one to adjust to a 0 index array.
   // Then it adds the number of steps to give the correct indexes
   const indexes = scales[scale].map((idx) => idx - 1 + steps);
-  return indexes;
+
+  // Adjusts indexes that go beyond the number of indexes in the notes array to rotate and
+  // go back to the beginning of the array
+  const rotatedIndexes = indexes.map((idx) => {
+    if (idx > 11) {
+      return idx - notes.length;
+    }
+
+    return idx;
+  });
+  return rotatedIndexes;
 }
 
 function highlightNotes(key, scale, notes) {
@@ -31,8 +41,8 @@ function highlightNotes(key, scale, notes) {
 
   console.log(indexes);
 
-  notes.forEach((note) => {
-    if (note.textContent === key) {
+  notes.forEach((note, idx) => {
+    if (indexes.includes(idx)) {
       note.style.backgroundColor = "red";
     }
   });
