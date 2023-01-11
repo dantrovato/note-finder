@@ -25,19 +25,20 @@ span {
   border: 1px solid black;
 }
 
+.guitar p {
+  border-bottom: 1px solid black;
+  position: relative;
+}
+
 #guitar {
   justify-content: flex-start;
 }
 
-#third-fret {
-  font-size: 5rem;
+#guitar p span {
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#guitar span {
-  display: flex;
+  position: absolute;
+  top: -12px;
+  left: 45%;
   align-items: center;
   justify-content: flex-start;
   padding: 0;
