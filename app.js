@@ -3,6 +3,7 @@ const scales = {
   minor: [1, 4, 8],
   major7: [1, 5, 8, 11],
   minor7: [1, 4, 8, 11],
+  dim: [1, 4, 7],
 };
 
 // Remove highlited background red and makes it white
