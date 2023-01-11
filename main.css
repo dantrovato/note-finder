@@ -1,3 +1,7 @@
+:root {
+  --e-string-top: -8.7rem;
+}
+
 header {
   margin-top: 3rem;
   text-align: center;
@@ -16,39 +20,19 @@ form {
   border: 1px solid grey;
 }
 
-span {
+.note {
   padding: 1rem;
 }
 
-/* .guitar {
-  height: 60%;
-  width: 5rem;
-  border-right: 1px solid black;
-} */
-
-/* .guitar p {
-  border: 0.1px solid black;
-  position: relative;
-} */
+.string,
+.empty-string {
+  padding: 1rem;
+}
 
 #guitar {
   justify-content: center;
   /* align-items: flex-start; */
 }
-
-/* #guitar p span {
-  display: flex;
-  position: absolute;
-  top: -12px;
-  left: 45%;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0;
-  height: 0.5rem;
-  width: 0.5rem;
-  border-radius: 50%;
-  background-color: black;
-} */
 
 .fret {
   display: flex;
@@ -57,8 +41,8 @@ span {
   top: -1rem;
 }
 
-.fret span {
-  max-height: 0.1px;
+.fret .string {
+  /* max-height: 0.1px; */
   width: 5rem;
   border-bottom: 1px solid black;
   border-right: 1px solid black;
@@ -70,4 +54,18 @@ span {
 
 .first-fret {
   border-left: 1px solid black;
+}
+
+.empty-string {
+  border: none;
+}
+
+.string {
+  position: relative;
+}
+
+em {
+  position: absolute;
+  top: 24px;
+  left: 50px;
 }
