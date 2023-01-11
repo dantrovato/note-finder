@@ -40,8 +40,6 @@ function highlightNotes(key, scale, notes) {
 
   const indexes = getIndexes(key, scale, notes);
 
-  console.log(indexes);
-
   notes.forEach((note, idx) => {
     if (indexes.includes(idx)) {
       note.style.backgroundColor = "red";

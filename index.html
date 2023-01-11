@@ -25,9 +25,23 @@
       <span class="note A#">A#</span>
       <span class="note B#">B</span>
     </main>
-    <div>
+    <div id="controls">
       <label for="enterKey">Enter key</label>
-      <input type="text" id="enterKey" />
+      <select name="key" id="enterKey">
+        <option value="C">C</option>
+        <option value="C#">C#/D♭</option>
+        <option value="D">D</option>
+        <option value="D#">D#/E♭</option>
+        <option value="E">E</option>
+        <option value="F">F</option>
+        <option value="F#">F#/G♭</option>
+        <option value="G">G</option>
+        <option value="G#">G#/A♭</option>
+        <option value="A">A</option>
+        <option value="A#/B♭">A#/B♭</option>
+        <option value="B">B</option>
+      </select>
+      <!-- <input type="text" id="enterKey" /> -->
       <label for="enterKey">Enter Scale</label>
       <select name="scale" id="enterScale">
         <option value="major">Major</option>
@@ -36,7 +50,6 @@
         <option value="minor7">Minor 7</option>
         <option value="dim">Dim</option>
       </select>
-      <!-- <input type="text" id="enterScale" value="" /> -->
       <input type="submit" />
     </div>
 
