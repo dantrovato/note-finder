@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Handle submit
   submit.addEventListener("click", (event) => {
+    event.preventDefault();
     const key = document.querySelector("#enterKey").value.toUpperCase();
     const scale = document.querySelector("#enterScale").value;
     highlightNotes(key, scale, notes);

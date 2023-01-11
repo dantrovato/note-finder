@@ -5,7 +5,8 @@ header {
 }
 
 main,
-section {
+section,
+form {
   width: 60%;
   display: flex;
   flex-wrap: wrap;
@@ -20,13 +21,13 @@ span {
 }
 
 .guitar {
-  height: 5rem;
+  /* height: 5rem; */
   width: 5rem;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .guitar p {
-  border-bottom: 1px solid black;
+  border: 0.1px solid black;
   position: relative;
 }
 
